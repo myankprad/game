@@ -6,6 +6,13 @@ function App() {
   const arr = ["IronMan", "Thanos", "CaptainSteve", "Thor"]
    
   const [arrCopy, setArrCopy] = useState(arr)
+  const [show, setShow] = useState(false)
+
+  const showButton=() =>{
+    setShow(true)
+  }
+
+
 
   const deleteHero = (itemIndex)=>{
     // let newArr = arrCopy;
@@ -32,11 +39,14 @@ function App() {
       arrCopy.map((el, i)=>{
        return ( 
         <li>
-         <button>X</button>
+         <button onClick={()=> showButton()}>X</button>
 
          {el}
-        <button onClick={()=> deleteHero(i) }>Delete</button>
-        
+          {
+            show ? (  <button onClick={()=> deleteHero(i) }>Delete</button>) 
+            : (<button></button>)
+
+          }      
          </li>
         )
       })
@@ -47,3 +57,20 @@ function App() {
 }
 
 export default App;
+
+/*
+let productPriceCalc = Promise.all(
+  products.map(async (product)=>{
+    const {productId, count}= product ;
+    const productFromDB = await product.findById(productId)
+    if(!productFromDB){
+      throw new CustomError("No Product Found", 400)
+    }
+    if(productFromDB.stock < count)
+  } )
+)
+
+
+
+
+*/
