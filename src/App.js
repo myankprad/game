@@ -3,7 +3,63 @@ import './App.css';
 
 
 function App() {
-  const arr = ["IronMan", "Thanos", "CaptainSteve", "Thor"]
+  
+
+  return (
+    <div className='center' >
+    <h1>Rock, Paper, Scissor</h1>
+    <div>
+      <div className='container'>
+        <div className='player'>
+          <div>Player 1: 0</div>
+          <div></div>
+        </div>
+        <div className='player'>
+          <div>Player 1: 0</div>
+          <div></div>
+        </div>
+        <div>
+          <button className='round-btn'>Rock</button>
+          <button className='round-btn'>Paper</button>
+          <button className='round-btn'>Scissor</button>
+
+        </div>
+        <h2>Player 1 wins</h2>
+      </div>
+    </div>
+    
+   
+   </div>
+  );
+}
+
+export default App;
+
+/*
+let productPriceCalc = Promise.all(
+  products.map(async (product)=>{
+    const {productId, count}= product ;
+    const productFromDB = await product.findById(productId)
+    if(!productFromDB){
+      throw new CustomError("No Product Found", 400)
+    }
+    if(productFromDB.stock < count)
+  } )
+)
+
+
+var corsOptions ={
+origin: "pttp://example.com",
+optionSuccessStatus : 200
+}
+
+
+
+*/
+
+
+/*
+const arr = ["IronMan", "Thanos", "CaptainSteve", "Thor"]
    
   const [arrCopy, setArrCopy] = useState(arr)
   const [show, setShow] = useState(false)
@@ -31,10 +87,7 @@ function App() {
   }
 
 
-
-  return (
-    <div className="app">
-    <ul>
+   <ul>
      {
       arrCopy.map((el, i)=>{
        return ( 
@@ -52,25 +105,6 @@ function App() {
       })
      }
     </ul>
-   </div>
-  );
-}
-
-export default App;
-
-/*
-let productPriceCalc = Promise.all(
-  products.map(async (product)=>{
-    const {productId, count}= product ;
-    const productFromDB = await product.findById(productId)
-    if(!productFromDB){
-      throw new CustomError("No Product Found", 400)
-    }
-    if(productFromDB.stock < count)
-  } )
-)
-
-
 
 
 */
